@@ -1,9 +1,9 @@
 import time
 
-from locust import HttpUser, constant_throughput, task
+from locust import FastHttpUser, constant_throughput, task
 
 
-class SPBUUser(HttpUser):
+class SPBUUser(FastHttpUser):
     # 1 user 1 request per second
     wait_time = constant_throughput(1)
 

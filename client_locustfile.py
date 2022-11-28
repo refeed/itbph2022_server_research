@@ -12,7 +12,7 @@ class SPBUUser(FastHttpUser):
         # Dummy data
         self.client.post(
             "/api/v1/transaction",
-            {
+            json={
                 "time": time.time(),
                 "buyer_id": "1234567891010",
                 "bbm_type": "pertalite",
